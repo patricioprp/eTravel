@@ -180,6 +180,8 @@ return [
         //Mis Aplicaciones
 
         Barryvdh\Debugbar\ServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+        
     ],
 
     /*
@@ -231,7 +233,8 @@ return [
 
         //Mis Aplicaciones
    
-        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,        
+
     ],
 
 ];
