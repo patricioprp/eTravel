@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Agente de Viaje Inteligente
+                    <a href="/home">Agente de Viaje Inteligente</a>
                 </div>
 
                 <div class="links">

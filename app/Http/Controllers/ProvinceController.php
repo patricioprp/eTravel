@@ -26,7 +26,7 @@ class ProvinceController extends Controller
      */
     public function getLocations(Request $request,$id){
         if($request->ajax()){
-            $locations = Location::towns($id);
+            $locations = Location::locations($id);
           return response()->json($locations);
         }
        }

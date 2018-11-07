@@ -14,8 +14,8 @@
        <div class="collapse navbar-collapse navbar-ex1-collapse">
          <ul class="nav navbar-nav navbar-right">
            <li class="@yield('viaje')"><a href=""><b>Viaje</b></a></li>
-           <li class="@yield('foro')"><a href=""><b>Grupos</b></a></li>
-           <li class="@yield('proveedor')"><a href=""><b>Foro</b></a></li>
+           <li class="@yield('grupo')"><a href=""><b>Grupos</b></a></li>
+           <li class="@yield('foro')"><a href=""><b>Foro</b></a></li>
          </ul>
    
          <ul class="nav navbar-nav navbar-right">

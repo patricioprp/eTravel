@@ -34,7 +34,7 @@ class GrupoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return view('admin.tipoA');
     }
 
     /**
