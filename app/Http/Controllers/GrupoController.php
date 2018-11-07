@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use App\Province;
+use App\Location;
 
 
 class GrupoController extends Controller
@@ -36,6 +38,7 @@ class GrupoController extends Controller
      */
     public function store(Request $request)
     {
+        //dd($request->province);
         $hoy = Carbon::now(); 
         $dia = $hoy->subDay();      
         $desde = Carbon::parse($request->desde)->format('Y-m-d');
@@ -48,7 +51,20 @@ class GrupoController extends Controller
             flash("la fecha de llegada no puede ser anterior a la fecha de partida")->error();
             return redirect(route('home'));
         }
-        return view('admin.tipoA');
+        $provincia = Province::find($request->province);
+        $localidad = Location::find($request->location);
+        if($localidad->name=="Oran"||$localidad->name=="San Salvador de Jujuy"){
+            return view('admin.nuevo')
+            ->with('request',$request)
+            ->with('provincia',$provincia)
+            ->with('localidad',$localidad);
+        }
+        else{
+        return view('admin.tipoA')
+        ->with('request',$request)
+        ->with('provincia',$provincia)
+        ->with('localidad',$localidad);
+    }
     }
 
     /**

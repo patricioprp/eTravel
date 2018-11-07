@@ -16,7 +16,7 @@
                         {!! Form::label('personas','Personas por Grupo',['class'=>'control-label']) !!}
                 </div>
                 <div class="col-lg-2">
-                        {!! Form::select('personas',['' => 'Seleccione la Cantidad', '2'=>'2','3'=>'3','4'=>'4'],null,['class'=>'form-control select-persona','required']) !!}
+                        {!! Form::select('personas',['' => 'Seleccione la Cantidad', '4'=>'4','5'=>'5','6'=>'6'],null,['class'=>'form-control select-persona','required']) !!}
                 </div>
                 <div class="col-lg-2">
                     {!! Form::label('alojamiento','Alojamiento',['class'=>'control-label']) !!}
@@ -35,7 +35,7 @@
            {!! Form::date('desde',null,['class' => 'form-control desde', 'placeholder'=>'dd-mm-aaaa','required']) !!}
         </div>
          <div class="col-lg-2">
-                {!! Form::label('hasta','Fecha de Llegada',['class'=>'control-label']) !!}   
+                {!! Form::label('hasta','Fecha de Finalizacion',['class'=>'control-label']) !!}   
          </div>
          <div class="col-lg-2">
                  {!! Form::date('hasta',null,['class' => 'form-control hasta', 'placeholder'=>'dd-mm-aaaa','required']) !!}
