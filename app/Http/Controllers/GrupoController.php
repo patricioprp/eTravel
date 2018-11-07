@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Carbon\Carbon;
+
 
 class GrupoController extends Controller
 {
@@ -34,6 +36,18 @@ class GrupoController extends Controller
      */
     public function store(Request $request)
     {
+        $hoy = Carbon::now(); 
+        $dia = $hoy->subDay();      
+        $desde = Carbon::parse($request->desde)->format('Y-m-d');
+        $hasta = Carbon::parse($request->hasta)->format('Y-m-d');
+        if($desde<$dia||$hasta<$dia){
+            flash("la fecha de partida o llegada no puede ser anterior a la fecha actual")->error();
+            return redirect(route('home'));
+        }
+        if($hasta<$desde){
+            flash("la fecha de llegada no puede ser anterior a la fecha de partida")->error();
+            return redirect(route('home'));
+        }
         return view('admin.tipoA');
     }
 
