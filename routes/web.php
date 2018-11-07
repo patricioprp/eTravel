@@ -18,3 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('grupo','GrupoController');
+Route::resource('provinces','ProvinceController');
+Route::get('locations/{id}','ProvinceController@getLocations');
