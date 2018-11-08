@@ -8,7 +8,7 @@
     
     <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}">   
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
+    @yield('css')
   </head>
   <body>
       @include('admin.template.partials.nav')
